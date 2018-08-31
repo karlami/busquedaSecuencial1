@@ -7,7 +7,7 @@ int busquedaSecuencial(int arr[], int num){
     for(int i=0; i < size; i++){
         p = &arr[0];
         if(num == *p){
-            return *p;
+            cout << "El numero de carne: "<< *p<< " ha sido encontrado"<< endl;
         }else{
             p += 1;
         }
@@ -16,11 +16,11 @@ int busquedaSecuencial(int arr[], int num){
 }
 
 int main() {
-    int listaCarnet = [24, 35, 59, 66, 71, 88, 97];
+    int listaCarnet[] = {24, 35, 59, 66, 71, 88, 97};
     cout << "Ingrese el numero de carne que desea buscar de la lista" << endl;
     int num1;
-
     cin >> num1;
+    busquedaSecuencial(listaCarnet, num1);
     cout << num1 << endl;
     return 0;
 }
